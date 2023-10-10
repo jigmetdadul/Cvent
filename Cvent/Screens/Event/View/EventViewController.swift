@@ -18,6 +18,7 @@ class EventViewController: UIViewController {
     var compositeLayout = Composite()
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("Eventasdfas")
         //registers the reusable xib cell to eventCollevtionView
         eventCollectionView.register(UINib(nibName: "EventCardCollectionViewCell", bundle: .main), forCellWithReuseIdentifier: "EventCardCollectionCell")
         
@@ -60,19 +61,31 @@ class EventViewController: UIViewController {
     //the below functions moves to the specified item on pressing previoud, all, today button
     //unactiveButton variable is made to reset the previous selected button's appearance
     private func scrollToItem(indexPath: Int, collectionView: UICollectionView, button: UIButton){
-        if let unactiveButton {
-            unactiveButton.backgroundColor = UIColor(named: "SecondaryBackgroundColour")
-        }
-        unactiveButton = button
+//        if let unactiveButton {
+//            unactiveButton.backgroundColor = UIColor(named: "SecondaryBackgroundColour")
+//        }
+//        unactiveButton = button
         
         let indexPathToScroll = IndexPath(item: indexPath, section: 0)
         collectionView.scrollToItem(at: indexPathToScroll, at: .left, animated: true)
         
         button.changeBGColourOnClick()
     }
-    func haah(){
-        let A = eventCollectionView.indexPathsForVisibleItems
-        let B = A.fil
+    //changes the button attribute based on indexpath or the index
+    func editButtonWithIndex(indexPath: IndexPath){
+        if(indexPath.item == 0){
+            previousButton.changeBGColourOnClick()
+            allButton.backgroundColor = UIColor(named: "SecondaryBackgroundColour")
+            todayButton.backgroundColor = UIColor(named: "SecondaryBackgroundColour")
+        }else if (indexPath.item == 1){
+            allButton.changeBGColourOnClick()
+            previousButton.backgroundColor = UIColor(named: "SecondaryBackgroundColour")
+            todayButton.backgroundColor = UIColor(named: "SecondaryBackgroundColour")
+        }else{
+            todayButton.changeBGColourOnClick()
+            allButton.backgroundColor = UIColor(named: "SecondaryBackgroundColour")
+            previousButton.backgroundColor = UIColor(named: "SecondaryBackgroundColour")
+        }
     }
 }
 
@@ -95,6 +108,12 @@ extension EventViewController: UICollectionViewDelegate, UICollectionViewDataSou
         return cell;
     }
     
+    //I am using this functiion to know which item is current being shown and so that i can update the UI based on the current item displayed: like changing the button colour relative to the item
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        editButtonWithIndex(indexPath: indexPath)
+        print(indexPath.item)
+    }
+
 }
 
 
