@@ -14,6 +14,7 @@
 		162C50BC2ACEF1C400DC9B55 /* Composite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162C50BB2ACEF1C400DC9B55 /* Composite.swift */; };
 		16B365512AD1CB3700560332 /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B365502AD1CB3700560332 /* FavouriteViewController.swift */; };
 		16B365542AD1E4A200560332 /* ClubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B365532AD1E4A200560332 /* ClubViewController.swift */; };
+		16D2BE052AD6EC8F00FC5853 /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D2BE042AD6EC8F00FC5853 /* EventViewModel.swift */; };
 		16EB068B2AC8183D00ACAB29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EB068A2AC8183D00ACAB29 /* AppDelegate.swift */; };
 		16EB068D2AC8183D00ACAB29 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EB068C2AC8183D00ACAB29 /* SceneDelegate.swift */; };
 		16EB068F2AC8183D00ACAB29 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EB068E2AC8183D00ACAB29 /* EventViewController.swift */; };
@@ -50,6 +51,7 @@
 		162C50BB2ACEF1C400DC9B55 /* Composite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Composite.swift; sourceTree = "<group>"; };
 		16B365502AD1CB3700560332 /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
 		16B365532AD1E4A200560332 /* ClubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubViewController.swift; sourceTree = "<group>"; };
+		16D2BE042AD6EC8F00FC5853 /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
 		16EB06872AC8183D00ACAB29 /* Cvent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cvent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16EB068A2AC8183D00ACAB29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16EB068C2AC8183D00ACAB29 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 		16EB06BC2AC81D3200ACAB29 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				16D2BE042AD6EC8F00FC5853 /* EventViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				16B365542AD1E4A200560332 /* ClubViewController.swift in Sources */,
+				16D2BE052AD6EC8F00FC5853 /* EventViewModel.swift in Sources */,
 				162C50BC2ACEF1C400DC9B55 /* Composite.swift in Sources */,
 				16EB068F2AC8183D00ACAB29 /* EventViewController.swift in Sources */,
 				161139B92ACDCB9B006F25EE /* EventCardCollectionViewCell.swift in Sources */,

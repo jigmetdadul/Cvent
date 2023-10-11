@@ -16,31 +16,36 @@ class EventViewController: UIViewController {
     
     var unactiveButton: UIButton! = nil
     var compositeLayout = Composite()
+    var arrayOfButtons:[UIButton] = []
+    let viewButtonModel = ButtonViewModel()
+    let viewScrollModel = ScrollViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Eventasdfas")
+        
+        //and arrau of buttons
+        arrayOfButtons = [previousButton, allButton, todayButton]
+        viewButtonModel.setArrayofButtons(allButtons: arrayOfButtons)
+        
         //registers the reusable xib cell to eventCollevtionView
         eventCollectionView.register(UINib(nibName: "EventCardCollectionViewCell", bundle: .main), forCellWithReuseIdentifier: "EventCardCollectionCell")
         
         //implements a compositional Layout for the colectionview
-        eventCollectionView.collectionViewLayout = createLayout()
         eventCollectionView.delegate = self
         eventCollectionView.dataSource = self
-        
-        //adding border to the buttons
-        previousButton.roundButtonCorner()
-        allButton.roundButtonCorner()
-        todayButton.roundButtonCorner()
+        eventCollectionView.collectionViewLayout = createLayout()
+
+        //adding corner to the button
+        viewButtonModel.roundButtonCorner(radius: 5)
     }
     
     @IBAction func previousPressed(_ sender: UIButton){
-        scrollToItem(indexPath: 0, collectionView: eventCollectionView, button: previousButton)
+        viewScrollModel.scrollToItem(indexPath: 0, collectionView: eventCollectionView)
     }
     @IBAction func allPressed(_ sender: UIButton) {
-        scrollToItem(indexPath: 1, collectionView: eventCollectionView, button: allButton)
+        viewScrollModel.scrollToItem(indexPath: 1, collectionView: eventCollectionView)
     }
     @IBAction func todayPressed(_ sender: UIButton){
-        scrollToItem(indexPath: 2, collectionView: eventCollectionView, button: todayButton)
+        viewScrollModel.scrollToItem(indexPath: 2, collectionView: eventCollectionView)
     }
     
     // the function that returns a compositional layout
@@ -55,37 +60,6 @@ class EventViewController: UIViewController {
         let section = NSCollectionLayoutSection(group: group)
         section.orthogonalScrollingBehavior = .groupPaging
         return UICollectionViewCompositionalLayout(section: section)
-    }
-    
-    
-    //the below functions moves to the specified item on pressing previoud, all, today button
-    //unactiveButton variable is made to reset the previous selected button's appearance
-    private func scrollToItem(indexPath: Int, collectionView: UICollectionView, button: UIButton){
-//        if let unactiveButton {
-//            unactiveButton.backgroundColor = UIColor(named: "SecondaryBackgroundColour")
-//        }
-//        unactiveButton = button
-        
-        let indexPathToScroll = IndexPath(item: indexPath, section: 0)
-        collectionView.scrollToItem(at: indexPathToScroll, at: .left, animated: true)
-        
-        button.changeBGColourOnClick()
-    }
-    //changes the button attribute based on indexpath or the index
-    func editButtonWithIndex(indexPath: IndexPath){
-        if(indexPath.item == 0){
-            previousButton.changeBGColourOnClick()
-            allButton.backgroundColor = UIColor(named: "SecondaryBackgroundColour")
-            todayButton.backgroundColor = UIColor(named: "SecondaryBackgroundColour")
-        }else if (indexPath.item == 1){
-            allButton.changeBGColourOnClick()
-            previousButton.backgroundColor = UIColor(named: "SecondaryBackgroundColour")
-            todayButton.backgroundColor = UIColor(named: "SecondaryBackgroundColour")
-        }else{
-            todayButton.changeBGColourOnClick()
-            allButton.backgroundColor = UIColor(named: "SecondaryBackgroundColour")
-            previousButton.backgroundColor = UIColor(named: "SecondaryBackgroundColour")
-        }
     }
 }
 
@@ -110,7 +84,8 @@ extension EventViewController: UICollectionViewDelegate, UICollectionViewDataSou
     
     //I am using this functiion to know which item is current being shown and so that i can update the UI based on the current item displayed: like changing the button colour relative to the item
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        editButtonWithIndex(indexPath: indexPath)
+//        editButtonWithIndex(indexPath: indexPath)c
+        viewButtonModel.editButtonWithIndex(indexPath: indexPath)
         print(indexPath.item)
     }
 
