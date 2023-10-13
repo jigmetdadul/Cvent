@@ -46,11 +46,11 @@ class FavouriteViewController: UIViewController {
     
     private func createLayout()-> UICollectionViewCompositionalLayout{
         //item
-        let item = compositeLayout.itemLayout(height: 1, width: 1, gap: 6)
+        let item = compositeLayout.itemLayout(height: .fractionalWidth(1), width: .fractionalHeight(1), gap: 6)
         
         //group: will contain the items
        
-        let group = compositeLayout.groupLayout(height: 1, width: 1, items: [item])
+        let group = compositeLayout.groupLayout(height: .fractionalWidth(1), width: .fractionalHeight(1), items: [item])
         let section = NSCollectionLayoutSection(group: group)
         section.orthogonalScrollingBehavior = .groupPaging
         return UICollectionViewCompositionalLayout(section: section)

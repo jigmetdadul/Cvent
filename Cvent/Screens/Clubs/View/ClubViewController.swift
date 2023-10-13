@@ -31,11 +31,11 @@ class ClubViewController: UIViewController {
     //Need to make the composite layout class in helper function better !!
     private func createLayout()-> UICollectionViewCompositionalLayout{
         //item
-        let item = compositeLayout.itemLayoutForClub(height: 1, width: 100, topGap: 0, leadinGap: 0, bottomGap: 0, trailingGap: 8)
+        let item = compositeLayout.itemLayoutSidesGap(height: .fractionalHeight(1) , width: .absolute(100) , topGap: 0, leadinGap: 0, bottomGap: 0, trailingGap: 8)
         
         //group: will contain the items
         // 113 is the button size, where 5 is the number of button
-        let group = compositeLayout.groupLayoutForClub(height: 1, width: 5*113, items: [item])
+        let group = compositeLayout.groupLayout(height: .fractionalHeight(1) , width: .absolute(5*200) , items: [item])
         
         let section = NSCollectionLayoutSection(group: group)
         section.contentInsets = .init(top: 0, leading: 1, bottom: 0, trailing: 1)
@@ -45,19 +45,16 @@ class ClubViewController: UIViewController {
     }
     
     private func createLayoutForClub()-> UICollectionViewCompositionalLayout {
-        let item = compositeLayout.itemLayoutForClub(height: 1, width: 100, topGap: 0, leadinGap: 0, bottomGap: 0, trailingGap: 8)
+        let item = compositeLayout.itemLayoutSidesGap(height: .fractionalHeight(1) , width: .absolute(150) , topGap: 0, leadinGap: 0, bottomGap: 0, trailingGap: 8)
         
-        let group = compositeLayout.groupLayoutForClub(height: 0.2, width: 2323, items: [item])
+        let group = compositeLayout.groupLayout(height: .fractionalHeight(0.3), width: .absolute(2323), items: [item])
         let section = NSCollectionLayoutSection(group: group)
-        section.orthogonalScrollingBehavior = .continuous
+        section.orthogonalScrollingBehavior = .paging
         section.contentInsets = .init(top: 0, leading: 1, bottom: 0, trailing: 1)
-        section.boundarySupplementaryItems = [supplementaryHeaderItem()]
+        section.boundarySupplementaryItems = [compositeLayout.supplementaryHeaderItem()]
         return UICollectionViewCompositionalLayout(section: section)
     }
-    func supplementaryHeaderItem()-> NSCollectionLayoutBoundarySupplementaryItem {
-        // The view Controller must have funciton func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView Properly in the ViewController
-        .init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(50)), elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
-    }
+    
 }
 
 // MARK: UICOLLECTIONVIEW
