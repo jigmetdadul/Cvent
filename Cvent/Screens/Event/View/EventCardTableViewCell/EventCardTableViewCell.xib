@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_12" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Image references" minToolsVersion="12.0"/>
@@ -60,37 +60,49 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCz-JX-kHM">
                                                 <rect key="frame" x="0.0" y="0.0" width="59.666666666666664" height="30"/>
-                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" name="SecondaryBackgroundColour"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Location" cornerStyle="capsule">
+                                                <buttonConfiguration key="configuration" style="plain" title="Location">
                                                     <imageReference key="image" image="location.fill" catalog="system" symbolScale="medium" variableValue="5.5511151231257827e-17"/>
-                                                    <fontDescription key="titleFontDescription" type="system" pointSize="10"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="14" scale="medium"/>
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="9"/>
+                                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="-18" bottom="0.0" trailing="-18"/>
+                                                    <color key="baseForegroundColor" name="PrimaryLabelColour"/>
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rEK-ge-K6Z">
                                                 <rect key="frame" x="95.666666666666671" y="0.0" width="60.000000000000014" height="30"/>
-                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" name="SecondaryBackgroundColour"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="About" imagePadding="2" cornerStyle="capsule">
+                                                <buttonConfiguration key="configuration" style="plain" title="About" imagePadding="0.0">
                                                     <imageReference key="image" image="info.circle.fill" catalog="system" symbolScale="medium"/>
-                                                    <fontDescription key="titleFontDescription" type="system" pointSize="10"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="14" scale="medium"/>
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="9"/>
+                                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="-18" bottom="0.0" trailing="-18"/>
+                                                    <color key="baseForegroundColor" name="PrimaryLabelColour"/>
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PyI-UJ-62U">
                                                 <rect key="frame" x="191.66666666666666" y="0.0" width="59.666666666666657" height="30"/>
-                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" name="SecondaryBackgroundColour"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="calendar" catalog="system" imagePlacement="leading" title="02/03/23" imagePadding="2" cornerStyle="capsule">
-                                                    <fontDescription key="titleFontDescription" type="system" pointSize="10"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="calendar" catalog="system" imagePlacement="leading" title="Date" imagePadding="2">
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="14" scale="medium"/>
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="9"/>
+                                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="-18" bottom="0.0" trailing="-18"/>
+                                                    <color key="baseForegroundColor" name="PrimaryLabelColour"/>
                                                 </buttonConfiguration>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z7u-Lb-1pg">
                                         <rect key="frame" x="287.33333333333331" y="0.0" width="27.666666666666686" height="30"/>
-                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" name="SecondaryBackgroundColour"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="star" catalog="system"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="star" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="14" scale="medium"/>
+                                            <color key="baseForegroundColor" name="PrimaryLabelColour"/>
+                                        </buttonConfiguration>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -111,11 +123,11 @@
                                     <constraint firstAttribute="height" constant="40.670000000000002" id="zob-b1-KA3"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="PrimaryLabelColour"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" name="TColour2"/>
+                        <color key="backgroundColor" red="0.92156862745098034" green="0.59607843137254901" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="1La-60-8dv" firstAttribute="leading" secondItem="ww3-AU-tGD" secondAttribute="leading" constant="8" id="3Gb-Lc-O6T"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="FcD-jp-gDh" secondAttribute="trailing" constant="8" id="9mF-EY-w0G"/>
@@ -142,6 +154,14 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="aboutButton" destination="rEK-ge-K6Z" id="VhG-iu-M8Y"/>
+                <outlet property="addToFavouriteButton" destination="z7u-Lb-1pg" id="Sq6-ey-lkj"/>
+                <outlet property="evenCardView" destination="ww3-AU-tGD" id="XUo-JA-X1A"/>
+                <outlet property="eventDateButton" destination="PyI-UJ-62U" id="7ng-DC-gDi"/>
+                <outlet property="locationButton" destination="DCz-JX-kHM" id="bOk-FX-Vza"/>
+                <outlet property="posterImage" destination="Io9-iP-4ZO" id="PDH-mj-QXF"/>
+            </connections>
             <point key="canvasLocation" x="54.198473282442748" y="33.450704225352112"/>
         </tableViewCell>
     </objects>
@@ -151,8 +171,11 @@
         <image name="info.circle.fill" catalog="system" width="128" height="123"/>
         <image name="location.fill" catalog="system" width="128" height="119"/>
         <image name="star" catalog="system" width="128" height="116"/>
-        <namedColor name="TColour2">
-            <color red="0.57999998331069946" green="0.75700002908706665" blue="0.53299999237060547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="PrimaryLabelColour">
+            <color red="0.071000002324581146" green="0.071000002324581146" blue="0.071000002324581146" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SecondaryBackgroundColour">
+            <color red="0.93300002813339233" green="0.90600001811981201" blue="0.88599997758865356" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>

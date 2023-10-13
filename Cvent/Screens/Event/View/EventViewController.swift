@@ -8,8 +8,8 @@
 import UIKit
 
 class EventViewController: UIViewController {
-    @IBOutlet weak var eventCollectionView: UICollectionView!
     
+    @IBOutlet weak var eventCollectionView: UICollectionView!
     @IBOutlet weak var previousButton: UIButton!
     @IBOutlet weak var allButton: UIButton!
     @IBOutlet weak var todayButton: UIButton!
@@ -33,11 +33,12 @@ class EventViewController: UIViewController {
         eventCollectionView.delegate = self
         eventCollectionView.dataSource = self
         eventCollectionView.collectionViewLayout = createLayout()
-
+        
         //adding corner to the button
-        viewButtonModel.roundButtonCorner(radius: 5)
+        viewButtonModel.roundButtonCorner(radius: 10)
     }
     
+//MARK: IBaction Buttons
     @IBAction func previousPressed(_ sender: UIButton){
         viewScrollModel.scrollToItem(indexPath: 0, collectionView: eventCollectionView)
     }
@@ -84,22 +85,15 @@ extension EventViewController: UICollectionViewDelegate, UICollectionViewDataSou
     
     //I am using this functiion to know which item is current being shown and so that i can update the UI based on the current item displayed: like changing the button colour relative to the item
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-//        editButtonWithIndex(indexPath: indexPath)c
+        //        editButtonWithIndex(indexPath: indexPath)c
         viewButtonModel.editButtonWithIndex(indexPath: indexPath)
-        print(indexPath.item)
+//        print(indexPath.item)
     }
-
+    
 }
 
 
 //MARK: UIBUTTON Functions
 extension UIButton{
-    func roundButtonCorner(){
-        layer.cornerRadius = 10
-        clipsToBounds = true
-    }
     
-    func changeBGColourOnClick(){
-        layer.backgroundColor = UIColor.lightGray.cgColor
-    }
 }

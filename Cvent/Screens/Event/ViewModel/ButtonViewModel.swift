@@ -16,43 +16,39 @@ class ButtonViewModel {
     func roundButtonCorner(radius: Float) {
         if let allButtons {
             for button in allButtons{
-                button.layer.cornerRadius = 10
+                button.layer.cornerRadius = CGFloat(radius)
                 button.clipsToBounds = true
             }
+        }else{
+            print("Initialise the array of button and call setArraysofButton and pass array as a prarameter")
         }
     }
     
     // Function to change the background color of the button when clicked
     func changeBGColourOnClick(button: UIButton) {
-        if let allButtons {
-            for button in allButtons{
-                button.layer.backgroundColor = UIColor.lightGray.cgColor
+        button.layer.backgroundColor = UIColor.lightGray.cgColor
+    }
+    
+    //changes the button UI based on indexPath
+    func editButtonWithIndex(indexPath: IndexPath){
+        if let allButtons{
+            for (index, button) in allButtons.enumerated(){
+                if index == indexPath.item {
+                    changeBGColourOnClick(button: button)
+                }else{
+                    button.backgroundColor = UIColor(named: "SecondaryBackgroundColour")
+                }
             }
+        }else{
+            print("Initialise the array of button and call setArraysofButton and pass array as a prarameter")
         }
     }
     
-    func editButtonWithIndex(indexPath: IndexPath){
-        if let allButtons{
-            for (index, element) in allButtons.enumerated(){
-                if index == indexPath.item {
-                    element.changeBGColourOnClick()
-                }else{
-                    element.backgroundColor = UIColor(named: "SecondaryBackgroundColour")
-                }
-            }
-        }
-    }
+    //takes an array of buttons for the object to work on
     func setArrayofButtons(allButtons: [UIButton]?){
         self.allButtons = allButtons
     }
 }
 
-//Any
-class ScrollViewModel {
-    func scrollToItem(indexPath: Int, collectionView: UICollectionView){
-        
-        let indexPathToScroll = IndexPath(item: indexPath, section: 0)
-        collectionView.scrollToItem(at: indexPathToScroll, at: .left, animated: true)
-        
-             }
-}
+
+
