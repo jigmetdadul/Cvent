@@ -52,10 +52,10 @@ class EventViewController: UIViewController {
     // the function that returns a compositional layout
     private func createLayout()-> UICollectionViewCompositionalLayout{
         //item
-        let item = compositeLayout.itemLayout(height: .fractionalWidth(1), width: .fractionalHeight(1), gap: 6)
+        let item = compositeLayout.itemLayout(height: .fractionalHeight(1), width: .fractionalWidth(1), gap: 10)
         
         //group: will contain the items
-        let group = compositeLayout.groupLayout(height: .fractionalWidth(1), width: .fractionalHeight(1), items: [item])
+        let group = compositeLayout.groupLayout(height: .fractionalHeight(1), width: .fractionalWidth(1), items: [item])
         
         //section
         let section = NSCollectionLayoutSection(group: group)
@@ -92,8 +92,3 @@ extension EventViewController: UICollectionViewDelegate, UICollectionViewDataSou
     
 }
 
-
-//MARK: UIBUTTON Functions
-extension UIButton{
-    
-}

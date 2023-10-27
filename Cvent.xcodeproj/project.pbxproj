@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		161139B92ACDCB9B006F25EE /* EventCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161139B72ACDCB9B006F25EE /* EventCardCollectionViewCell.swift */; };
 		161478FA2AD06E9700F4DD42 /* EventCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161478F82AD06E9700F4DD42 /* EventCardTableViewCell.swift */; };
 		161478FB2AD06E9700F4DD42 /* EventCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 161478F92AD06E9700F4DD42 /* EventCardTableViewCell.xib */; };
-		161478FD2AD0767B00F4DD42 /* EventCardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 161478FC2AD0767B00F4DD42 /* EventCardCollectionViewCell.xib */; };
+		161D018B2AEA93D700EA10DF /* EventCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161D01892AEA93D700EA10DF /* EventCardCollectionViewCell.swift */; };
+		161D018C2AEA93D700EA10DF /* EventCardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 161D018A2AEA93D700EA10DF /* EventCardCollectionViewCell.xib */; };
 		162C50BC2ACEF1C400DC9B55 /* Composite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162C50BB2ACEF1C400DC9B55 /* Composite.swift */; };
 		16B365512AD1CB3700560332 /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B365502AD1CB3700560332 /* FavouriteViewController.swift */; };
 		16B365542AD1E4A200560332 /* ClubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B365532AD1E4A200560332 /* ClubViewController.swift */; };
@@ -48,10 +48,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		161139B72ACDCB9B006F25EE /* EventCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCardCollectionViewCell.swift; sourceTree = "<group>"; };
 		161478F82AD06E9700F4DD42 /* EventCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCardTableViewCell.swift; sourceTree = "<group>"; };
 		161478F92AD06E9700F4DD42 /* EventCardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventCardTableViewCell.xib; sourceTree = "<group>"; };
-		161478FC2AD0767B00F4DD42 /* EventCardCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EventCardCollectionViewCell.xib; path = "../../../../../../../../Library/Mobile Documents/.Trash/EventCardCollectionViewCell.xib"; sourceTree = "<group>"; };
+		161D01892AEA93D700EA10DF /* EventCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCardCollectionViewCell.swift; sourceTree = "<group>"; };
+		161D018A2AEA93D700EA10DF /* EventCardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventCardCollectionViewCell.xib; sourceTree = "<group>"; };
 		162C50BB2ACEF1C400DC9B55 /* Composite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Composite.swift; sourceTree = "<group>"; };
 		16B365502AD1CB3700560332 /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
 		16B365532AD1E4A200560332 /* ClubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubViewController.swift; sourceTree = "<group>"; };
@@ -103,8 +103,8 @@
 		161478F12AD04B4A00F4DD42 /* EventCardCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				161139B72ACDCB9B006F25EE /* EventCardCollectionViewCell.swift */,
-				161478FC2AD0767B00F4DD42 /* EventCardCollectionViewCell.xib */,
+				161D01892AEA93D700EA10DF /* EventCardCollectionViewCell.swift */,
+				161D018A2AEA93D700EA10DF /* EventCardCollectionViewCell.xib */,
 			);
 			path = EventCardCollectionViewCell;
 			sourceTree = "<group>";
@@ -420,7 +420,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				16EB06972AC8183E00ACAB29 /* LaunchScreen.storyboard in Resources */,
-				161478FD2AD0767B00F4DD42 /* EventCardCollectionViewCell.xib in Resources */,
+				161D018C2AEA93D700EA10DF /* EventCardCollectionViewCell.xib in Resources */,
 				16D4D0572AD828D200C7B8DE /* ClubCollectionViewCell.xib in Resources */,
 				16EB06942AC8183E00ACAB29 /* Assets.xcassets in Resources */,
 				16EB06922AC8183D00ACAB29 /* Main.storyboard in Resources */,
@@ -454,11 +454,11 @@
 				16D2BE052AD6EC8F00FC5853 /* ButtonViewModel.swift in Sources */,
 				162C50BC2ACEF1C400DC9B55 /* Composite.swift in Sources */,
 				16EB068F2AC8183D00ACAB29 /* EventViewController.swift in Sources */,
-				161139B92ACDCB9B006F25EE /* EventCardCollectionViewCell.swift in Sources */,
 				16EB068B2AC8183D00ACAB29 /* AppDelegate.swift in Sources */,
 				16B365512AD1CB3700560332 /* FavouriteViewController.swift in Sources */,
 				16D2BE072AD70BA800FC5853 /* ScrollViewModel.swift in Sources */,
 				161478FA2AD06E9700F4DD42 /* EventCardTableViewCell.swift in Sources */,
+				161D018B2AEA93D700EA10DF /* EventCardCollectionViewCell.swift in Sources */,
 				16D2BE0C2AD711EE00FC5853 /* ImageViewModel.swift in Sources */,
 				16EB068D2AC8183D00ACAB29 /* SceneDelegate.swift in Sources */,
 			);

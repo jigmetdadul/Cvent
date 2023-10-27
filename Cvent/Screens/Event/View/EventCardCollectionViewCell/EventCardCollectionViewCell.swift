@@ -2,16 +2,18 @@
 //  EventCardCollectionViewCell.swift
 //  Cvent
 //
-//  Created by Jigmet stanzin Dadul on 04/10/23.
+//  Created by Jigmet stanzin Dadul on 26/10/23.
 //
 
 import UIKit
 
-class EventCardCollectionViewCell: UICollectionViewCell{
+class EventCardCollectionViewCell: UICollectionViewCell {
     //Identifier:- EventCardCollectionCell
     @IBOutlet weak var tableView: UITableView!
+    
+    
     let composite = Composite()
-    let gap:CGFloat = 100
+    let gap:CGFloat = 50
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,10 +24,8 @@ class EventCardCollectionViewCell: UICollectionViewCell{
         tableView.rowHeight = 194
         
     }
-    
 
 }
-
 extension EventCardCollectionViewCell: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
@@ -33,12 +33,8 @@ extension EventCardCollectionViewCell: UITableViewDelegate, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "EventCardTableCell") as! EventCardTableViewCell
-         
+        
         return cell
     }
     
-   
-    
 }
-
-
