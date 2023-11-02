@@ -31,7 +31,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Wv-lP-gUx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1381" y="86"/>
+            <point key="canvasLocation" x="-1369" y="105"/>
         </scene>
         <!--Settings-->
         <scene sceneID="O2K-pL-L6o">
@@ -70,10 +70,10 @@
             </objects>
             <point key="canvasLocation" x="-150" y="-911"/>
         </scene>
-        <!--Sign Up View Controller-->
+        <!--View Controller-->
         <scene sceneID="w2g-Pu-gpO">
             <objects>
-                <viewController id="GoW-hQ-DZC" customClass="SignUpViewController" customModule="Cvent" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="GoW-hQ-DZC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="N64-94-L8s">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="780"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -112,8 +112,9 @@
                                                                 <imageReference key="image" image="person.fill" catalog="system" symbolScale="default"/>
                                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="22"/>
                                                             </imageView>
-                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W2e-iH-djB">
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter your email" placeholder="Enter your email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W2e-iH-djB">
                                                                 <rect key="frame" x="59" y="0.0" width="291" height="55"/>
+                                                                <color key="textColor" name="PrimaryLabelColour"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
@@ -142,7 +143,7 @@
                                                                 <imageReference key="image" image="key.fill" catalog="system" symbolScale="default"/>
                                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="22"/>
                                                             </imageView>
-                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter new password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MN6-QH-Dgg">
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter new password" placeholder="Enter new password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MN6-QH-Dgg">
                                                                 <rect key="frame" x="59" y="0.0" width="291" height="55"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -170,7 +171,7 @@
                                                                 </constraints>
                                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="22"/>
                                                             </imageView>
-                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kh2-E4-jvK">
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Confirm your password" placeholder="Confirm your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kh2-E4-jvK">
                                                                 <rect key="frame" x="60" y="0.0" width="290" height="55"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -200,7 +201,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Log In"/>
                                                 <connections>
-                                                    <action selector="logButtonTapped:" destination="GoW-hQ-DZC" eventType="touchUpInside" id="pUI-71-OLy"/>
+                                                    <segue destination="4aP-1E-T1o" kind="presentation" modalPresentationStyle="fullScreen" id="aAA-5C-bgV"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8V7-8O-ixA">
@@ -327,16 +328,10 @@
                         </constraints>
                     </view>
                     <size key="freeformSize" width="393" height="780"/>
-                    <connections>
-                        <outlet property="confirmPasswordTextField" destination="Kh2-E4-jvK" id="09b-Ko-dBF"/>
-                        <outlet property="emailTextField" destination="W2e-iH-djB" id="Kbc-yC-rDi"/>
-                        <outlet property="passwordTextField" destination="MN6-QH-Dgg" id="Fb2-b5-g8Y"/>
-                        <segue destination="4aP-1E-T1o" kind="presentation" identifier="SignUpSegueId" modalPresentationStyle="fullScreen" id="HS8-OY-APy"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QQe-Nn-TTO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3127" y="-911"/>
+            <point key="canvasLocation" x="-3127" y="-601"/>
         </scene>
         <!--Clubs-->
         <scene sceneID="1DN-V4-ErL">
@@ -846,10 +841,10 @@
             </objects>
             <point key="canvasLocation" x="-149" y="1160"/>
         </scene>
-        <!--Log In View Controller-->
+        <!--View Controller-->
         <scene sceneID="Lf9-99-hnP">
             <objects>
-                <viewController id="OJr-Le-gXo" customClass="LogInViewController" customModule="Cvent" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="OJr-Le-gXo" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dz1-zb-VAi">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -888,7 +883,7 @@
                                                                 <imageReference key="image" image="person.fill" catalog="system" symbolScale="default"/>
                                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="22"/>
                                                             </imageView>
-                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text=" " placeholder="Enter you email" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z44-cR-7oi">
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter your email" placeholder="Enter your email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z44-cR-7oi">
                                                                 <rect key="frame" x="59" y="0.0" width="291" height="55"/>
                                                                 <color key="textColor" name="PrimaryLabelColour"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -918,7 +913,7 @@
                                                                 </constraints>
                                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="22"/>
                                                             </imageView>
-                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text=" " placeholder="Enter your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vUl-br-3Ll">
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Confirm your password" placeholder="Confirm your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vUl-br-3Ll">
                                                                 <rect key="frame" x="60" y="0.0" width="290" height="55"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -948,7 +943,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Log In"/>
                                                 <connections>
-                                                    <action selector="LogInButtonTapped:" destination="OJr-Le-gXo" eventType="touchUpInside" id="FzT-vz-Sdz"/>
+                                                    <segue destination="4aP-1E-T1o" kind="presentation" modalPresentationStyle="fullScreen" id="eo1-km-g2P"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JHx-GI-pfQ">
@@ -1078,15 +1073,10 @@
                         </constraints>
                     </view>
                     <size key="freeformSize" width="393" height="800"/>
-                    <connections>
-                        <outlet property="emailTextField" destination="Z44-cR-7oi" id="MXH-Ru-H3M"/>
-                        <outlet property="passwordTextField" destination="vUl-br-3Ll" id="v6v-fN-XYt"/>
-                        <segue destination="4aP-1E-T1o" kind="presentation" identifier="LogInId" modalPresentationStyle="fullScreen" id="haI-tW-SAa"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="72u-Wh-EVn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4280.1526717557254" y="-246.47887323943664"/>
+            <point key="canvasLocation" x="-4392" y="86"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="QJg-lA-0IZ">
@@ -1130,7 +1120,7 @@
                                                                 <imageReference key="image" image="person.fill" catalog="system" symbolScale="default"/>
                                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="22"/>
                                                             </imageView>
-                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text=" " placeholder="Enter your email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kvR-kw-KtL">
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter your email" placeholder="Enter your email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kvR-kw-KtL">
                                                                 <rect key="frame" x="59" y="0.0" width="291" height="55"/>
                                                                 <color key="textColor" name="PrimaryLabelColour"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1160,7 +1150,7 @@
                                                                 </constraints>
                                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="22"/>
                                                             </imageView>
-                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text=" " placeholder="Confirm your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aFK-nT-9NZ">
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Confirm your password" placeholder="Confirm your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aFK-nT-9NZ">
                                                                 <rect key="frame" x="60" y="0.0" width="290" height="55"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -1300,11 +1290,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="59N-yR-k7J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3127.4809160305344" y="547.88732394366195"/>
+            <point key="canvasLocation" x="-3127" y="785"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="haI-tW-SAa"/>
+        <segue reference="eo1-km-g2P"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="7611770" width="512" height="512"/>
@@ -1318,7 +1308,7 @@
         <image name="slider.horizontal.3" catalog="system" width="128" height="99"/>
         <image name="star" catalog="system" width="128" height="116"/>
         <namedColor name="LoginBackground">
-            <color red="0.11800000071525574" green="0.12200000137090683" blue="0.14100000262260437" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.11764705882352941" green="0.12156862745098039" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="PrimaryLabelColour">
             <color red="0.071000002324581146" green="0.071000002324581146" blue="0.071000002324581146" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
