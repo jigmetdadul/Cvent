@@ -26,17 +26,16 @@ class LogInViewController: UIViewController {
         logInUser(registeredEmail: email, password: password)
     }
     func logInUser(registeredEmail: String, password: String){
-        Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
-            guard self != nil else {
-                print(" weak self error(LogIn)")
-                return
-            }
+        FirebaseAuthentication.shared.createNewUser(withEmail: registeredEmail, withPasword: password) { AuthStatus in
             
-            if let error {
-                print(error.localizedDescription)
-            }else{
-                print("Log In segue performed")
-                self?.performSegue(withIdentifier: "LogInId", sender: self)
+            switch AuthStatus{
+            case .unsSuccessful:
+                print("LogIn Unsucessful")
+            case .successful:
+                print("Login successful")
+                self.performSegue(withIdentifier: "LogInId", sender: self)
+            case .none:
+                print("nil found while trying to log In")
             }
         }
     }
