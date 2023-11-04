@@ -12,6 +12,7 @@
 		161D018B2AEA93D700EA10DF /* EventCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161D01892AEA93D700EA10DF /* EventCardCollectionViewCell.swift */; };
 		161D018C2AEA93D700EA10DF /* EventCardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 161D018A2AEA93D700EA10DF /* EventCardCollectionViewCell.xib */; };
 		162C50BC2ACEF1C400DC9B55 /* Composite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162C50BB2ACEF1C400DC9B55 /* Composite.swift */; };
+		166917942AF6A12900D7414C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166917932AF6A12900D7414C /* SettingsViewController.swift */; };
 		16A2CF922AF5172E009EC12D /* FirebaseAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A2CF912AF5172E009EC12D /* FirebaseAuthentication.swift */; };
 		16A2CF942AF517A8009EC12D /* AdminLogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A2CF932AF517A8009EC12D /* AdminLogInViewController.swift */; };
 		16AFD9E22AF3C98300E97D17 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 16AFD9E12AF3C98300E97D17 /* GoogleService-Info.plist */; };
@@ -59,6 +60,7 @@
 		161D01892AEA93D700EA10DF /* EventCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCardCollectionViewCell.swift; sourceTree = "<group>"; };
 		161D018A2AEA93D700EA10DF /* EventCardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventCardCollectionViewCell.xib; sourceTree = "<group>"; };
 		162C50BB2ACEF1C400DC9B55 /* Composite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Composite.swift; sourceTree = "<group>"; };
+		166917932AF6A12900D7414C /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		16A2CF912AF5172E009EC12D /* FirebaseAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthentication.swift; sourceTree = "<group>"; };
 		16A2CF932AF517A8009EC12D /* AdminLogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminLogInViewController.swift; sourceTree = "<group>"; };
 		16AFD9E12AF3C98300E97D17 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -144,6 +146,38 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1669178F2AF6A0F500D7414C /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				166917922AF6A10D00D7414C /* ViewModel */,
+				166917912AF6A10800D7414C /* View */,
+				166917902AF6A0FF00D7414C /* Model */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		166917902AF6A0FF00D7414C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		166917912AF6A10800D7414C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				166917932AF6A12900D7414C /* SettingsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		166917922AF6A10D00D7414C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		16A2CF902AF51709009EC12D /* Firebase */ = {
@@ -406,6 +440,7 @@
 		16EB06BD2AC81D6300ACAB29 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				1669178F2AF6A0F500D7414C /* Settings */,
 				16A2CF952AF53F08009EC12D /* Admin */,
 				16AFD9EB2AF411C100E97D17 /* LogIn */,
 				16AFD9E52AF3CD2500E97D17 /* SignUp */,
@@ -597,6 +632,7 @@
 				161D018B2AEA93D700EA10DF /* EventCardCollectionViewCell.swift in Sources */,
 				16A2CF942AF517A8009EC12D /* AdminLogInViewController.swift in Sources */,
 				16AFD9F02AF411FE00E97D17 /* LogInViewController.swift in Sources */,
+				166917942AF6A12900D7414C /* SettingsViewController.swift in Sources */,
 				16A2CF922AF5172E009EC12D /* FirebaseAuthentication.swift in Sources */,
 				16D2BE0C2AD711EE00FC5853 /* ImageViewModel.swift in Sources */,
 				16AFD9E42AF3CD1F00E97D17 /* SignUpViewController.swift in Sources */,

@@ -17,12 +17,12 @@ enum AuthenticationStatus: Error{
 class FirebaseAuthentication{
     
     static let shared = FirebaseAuthentication()
-    
+    private let firebaseAuth = Auth.auth()
     private init(){
          
     }
     func createNewUser(withEmail email: String, withPassword password: String, completion: @escaping(AuthenticationStatus?)->Void){
-        Auth.auth().createUser(withEmail: email, password: password) { [weak self] authRes, error in
+        firebaseAuth.createUser(withEmail: email, password: password) { [weak self] authRes, error in
             guard self != nil else { return }
             
             if let error{
@@ -34,7 +34,7 @@ class FirebaseAuthentication{
         }
     }
     func signInUser(withEmail email: String, withPassword password: String, completion: @escaping(AuthenticationStatus?)->Void){
-        Auth.auth().signIn(withEmail: email, password: password) { AuthRes, error in
+        firebaseAuth.signIn(withEmail: email, password: password) { AuthRes, error in
             if let error{
                 print(error.localizedDescription)
                 completion(.unsSuccessful)
@@ -43,4 +43,24 @@ class FirebaseAuthentication{
             }
         }
     }
+    
+    func logOutUser(completion: @escaping (AuthenticationStatus)->Void){
+        
+        
+        do {
+            let userEmail = getUserInfo()?.email ?? "User"
+          try firebaseAuth.signOut()
+            completion(.successful)
+            print("\(userEmail) signed out")
+        } catch let signOutError as NSError {
+            completion(.unsSuccessful)
+            print("Error signing out: %@", signOutError.localizedDescription)
+        }
+      
+    }
+    
+    func getUserInfo()->User?{
+      firebaseAuth.currentUser
+    }
 }
+

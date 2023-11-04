@@ -6,8 +6,7 @@
 //
 
 import UIKit
-import Firebase
-import FirebaseAuth
+
 
 class SignUpViewController: UIViewController {
 
@@ -51,21 +50,6 @@ class SignUpViewController: UIViewController {
             }
         }
         
-    }
-    
-    func createNewUser(email: String, password: String){
-        if passwordConfirmed {
-            Auth.auth().createUser(withEmail: email, password: password){ authResult, error in
-                if let error = error {
-                    print(error.localizedDescription)
-                }else{
-                    print("Segue Performed")
-                    self.performSegue(withIdentifier: "SignUpSegueId", sender: self)
-                }
-            }
-        }else{
-            print("Password does not match\n")
-        }
     }
 }
 

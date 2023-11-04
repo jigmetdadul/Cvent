@@ -36,7 +36,7 @@
         <!--Settings-->
         <scene sceneID="O2K-pL-L6o">
             <objects>
-                <viewController id="Ewu-ND-auY" sceneMemberID="viewController">
+                <viewController id="Ewu-ND-auY" customClass="SettingsViewController" customModule="Cvent" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2ln-eq-MGM">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -53,6 +53,10 @@
                                         <rect key="frame" x="0.0" y="50.333333333333314" width="79.666666666666671" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="signup "/>
+                                        <connections>
+                                            <action selector="SignOutTapped:" destination="Ewu-ND-auY" eventType="touchUpInside" id="iHz-g3-uY7"/>
+                                            <action selector="signOutTapped:" destination="djz-rQ-6eN" eventType="touchUpInside" id="ifm-Yk-Mbd"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -65,8 +69,12 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="gearshape" catalog="system" id="iCO-dL-WuP"/>
+                    <connections>
+                        <segue destination="OJr-Le-gXo" kind="presentation" identifier="LogInId1" modalPresentationStyle="fullScreen" id="O69-71-unD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YhI-JM-rvQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="djz-rQ-6eN" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-150" y="-911"/>
         </scene>
@@ -888,7 +896,7 @@
                                                                 <imageReference key="image" image="person.fill" catalog="system" symbolScale="default"/>
                                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="22"/>
                                                             </imageView>
-                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter you email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z44-cR-7oi">
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1@gmail.com" placeholder="Enter you email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z44-cR-7oi">
                                                                 <rect key="frame" x="59" y="0.0" width="291" height="55"/>
                                                                 <color key="textColor" name="PrimaryLabelColour"/>
                                                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
@@ -918,7 +926,7 @@
                                                                 </constraints>
                                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="22"/>
                                                             </imageView>
-                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vUl-br-3Ll">
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456" placeholder="Enter your password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vUl-br-3Ll">
                                                                 <rect key="frame" x="60" y="0.0" width="290" height="55"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -1309,7 +1317,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="drA-qB-K3r"/>
+        <segue reference="O69-71-unD"/>
+        <segue reference="haI-tW-SAa"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="7611770" width="512" height="512"/>
