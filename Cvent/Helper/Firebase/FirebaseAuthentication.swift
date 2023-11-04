@@ -21,7 +21,7 @@ class FirebaseAuthentication{
     private init(){
          
     }
-    func createNewUser(withEmail email: String, withPasword password: String, completion: @escaping(AuthenticationStatus?)->Void){
+    func createNewUser(withEmail email: String, withPassword password: String, completion: @escaping(AuthenticationStatus?)->Void){
         Auth.auth().createUser(withEmail: email, password: password) { [weak self] authRes, error in
             guard self != nil else { return }
             

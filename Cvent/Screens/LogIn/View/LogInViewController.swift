@@ -26,7 +26,7 @@ class LogInViewController: UIViewController {
         logInUser(registeredEmail: email, password: password)
     }
     func logInUser(registeredEmail: String, password: String){
-        FirebaseAuthentication.shared.createNewUser(withEmail: registeredEmail, withPasword: password) { AuthStatus in
+        FirebaseAuthentication.shared.signInUser(withEmail: registeredEmail, withPassword: password) { AuthStatus in
             
             switch AuthStatus{
             case .unsSuccessful:

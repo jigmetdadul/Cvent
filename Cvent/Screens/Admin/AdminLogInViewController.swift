@@ -24,7 +24,8 @@ class AdminLogInViewController: UIViewController {
         
     }
     
-    @IBAction func LogInButtonTapped(_ sender: UIButton){
+    @IBAction func LogInButtonTapped(_ sender: UIButton) {
+        print("pressed")
         FirebaseAuthentication.shared.signInUser(withEmail: email, withPassword: password) { authStatus in
             switch authStatus{
             case .unsSuccessful:
@@ -37,5 +38,4 @@ class AdminLogInViewController: UIViewController {
             }
         }
     }
-
 }

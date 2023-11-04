@@ -38,7 +38,7 @@ class SignUpViewController: UIViewController {
       }
     @IBAction func logButtonTapped(_ sender: UIButton) {
         if passwordConfirmed {
-            FirebaseAuthentication.shared.createNewUser(withEmail: email, withPasword: password) { authStatus in
+            FirebaseAuthentication.shared.createNewUser(withEmail: email, withPassword: password) { authStatus in
                 switch authStatus{
                 case .unsSuccessful:
                     print("Admin not registered or wrong password")
