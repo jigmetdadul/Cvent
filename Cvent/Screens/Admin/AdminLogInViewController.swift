@@ -28,7 +28,7 @@ class AdminLogInViewController: UIViewController {
         print("pressed")
         FirebaseAuthentication.shared.signInUser(withEmail: email, withPassword: password) { authStatus in
             switch authStatus{
-            case .unsSuccessful:
+            case .unSuccessful:
                 print("Unsucessul")
             case .successful:
                 print("Successul")

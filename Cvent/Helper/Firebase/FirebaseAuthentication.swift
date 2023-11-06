@@ -10,7 +10,7 @@ import FirebaseAuth
 
 enum AuthenticationStatus: Error{
     case successful
-    case unsSuccessful
+    case unSuccessful
 }
 
 
@@ -27,17 +27,18 @@ class FirebaseAuthentication{
             
             if let error{
                 print(error.localizedDescription)
-                completion(.unsSuccessful)
+                completion(.unSuccessful)
             }else{
                 completion(.successful)
             }
         }
     }
+    
     func signInUser(withEmail email: String, withPassword password: String, completion: @escaping(AuthenticationStatus?)->Void){
         firebaseAuth.signIn(withEmail: email, password: password) { AuthRes, error in
             if let error{
                 print(error.localizedDescription)
-                completion(.unsSuccessful)
+                completion(.unSuccessful)
             }else{
                 completion(.successful)
             }
@@ -53,7 +54,7 @@ class FirebaseAuthentication{
             completion(.successful)
             print("\(userEmail) signed out")
         } catch let signOutError as NSError {
-            completion(.unsSuccessful)
+            completion(.unSuccessful)
             print("Error signing out: %@", signOutError.localizedDescription)
         }
       

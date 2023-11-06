@@ -24,7 +24,7 @@ class SettingsViewController: UIViewController {
         FirebaseAuthentication.shared.logOutUser{
             AuthRes in
             switch AuthRes{
-            case .unsSuccessful: print("Logout un success")
+            case .unSuccessful: print("Logout un success")
                 
             case .successful:
                print("Logout Success")

@@ -29,7 +29,7 @@ class LogInViewController: UIViewController {
         FirebaseAuthentication.shared.signInUser(withEmail: registeredEmail, withPassword: password) { AuthStatus in
             
             switch AuthStatus{
-            case .unsSuccessful:
+            case .unSuccessful:
                 print("LogIn Unsucessful")
             case .successful:
                 print("Login successful")

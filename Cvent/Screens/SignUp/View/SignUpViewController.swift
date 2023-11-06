@@ -39,7 +39,7 @@ class SignUpViewController: UIViewController {
         if passwordConfirmed {
             FirebaseAuthentication.shared.createNewUser(withEmail: email, withPassword: password) { authStatus in
                 switch authStatus{
-                case .unsSuccessful:
+                case .unSuccessful:
                     print("Admin not registered or wrong password")
                 case .successful:
                     print("signUp successful")
