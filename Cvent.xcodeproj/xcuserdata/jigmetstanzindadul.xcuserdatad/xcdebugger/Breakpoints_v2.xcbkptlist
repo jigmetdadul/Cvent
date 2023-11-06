@@ -3,4 +3,69 @@
    uuid = "43416065-A50F-4775-88E6-D3B9B40E6CC2"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "472C37DC-9168-4F55-A245-C6631B8273E5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Cvent/Screens/LogIn/View/LogInViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "observeEvent()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "472C37DC-9168-4F55-A245-C6631B8273E5 - d9ea4db188db87de"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Cvent.LogInViewController.observeEvent() -&gt; ()"
+                  moduleName = "Cvent"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jigmetstanzindadul/Documents/IOSdev/Cvent/Cvent/Screens/LogIn/View/LogInViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "60">
+               </Location>
+               <Location
+                  uuid = "472C37DC-9168-4F55-A245-C6631B8273E5 - 8e8d75cf8c9cba25"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Cvent.LogInViewModel.Result) -&gt; () in Cvent.LogInViewController.observeEvent() -&gt; ()"
+                  moduleName = "Cvent"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jigmetstanzindadul/Documents/IOSdev/Cvent/Cvent/Screens/LogIn/View/LogInViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "472C37DC-9168-4F55-A245-C6631B8273E5 - d9ea4db188db87de"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Cvent.LogInViewController.observeEvent() -&gt; ()"
+                  moduleName = "Cvent"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jigmetstanzindadul/Documents/IOSdev/Cvent/Cvent/Screens/LogIn/View/LogInViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "44">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
