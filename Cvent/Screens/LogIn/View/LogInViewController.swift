@@ -9,34 +9,50 @@ import UIKit
 
 
 class LogInViewController: UIViewController {
-
+    
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
     private var email: String { emailTextField.text!}
     private var password: String {passwordTextField.text!}
     
+    let viewModel = LogInViewModel(authService: FirebaseAuthenticationService())
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        observeEvent()
+        
         // Do any additional setup after loading the view.
     }
-
+    
     @IBAction func LogInButtonTapped(_ sender: UIButton) {
-        logInUser(registeredEmail: email, password: password)
+        print("pressed")
+        viewModel.login(withEmail: email, withPassword: password)
     }
-    func logInUser(registeredEmail: String, password: String){
-        FirebaseAuthentication.shared.signInUser(withEmail: registeredEmail, withPassword: password) { AuthStatus in
-            
-            switch AuthStatus{
-            case .unSuccessful:
-                print("LogIn Unsucessful")
-            case .successful:
-                print("Login successful")
+    
+    //Data binding 
+    func observeEvent(){
+        viewModel.authenticationResult = { result in
+            // Handle the authentication result here.
+            switch result {
+            case .checking:
+                print("checking")
+                break
+            case .success:
+                // Authentication succeeded, navigate to the next screen or perform the required action.
+                print("Success")
                 self.performSegue(withIdentifier: "LogInId", sender: self)
-            case .none:
-                print("nil found while trying to log In")
+                break
+            case .incorrectData:
+                print("incorrectDat")
+                // Handle incorrect login data (e.g., show an error message).
+                break
+            case .failure:
+                print("failure")
+                // Handle authentication failure (e.g., show an error message).
+                break
             }
         }
+        
     }
+
 }

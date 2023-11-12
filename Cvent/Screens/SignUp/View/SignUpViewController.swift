@@ -24,32 +24,35 @@ class SignUpViewController: UIViewController {
         }
         return confirmPasswordText == passwordText
     }
-
+    
+    let viewModel = SignUpModelView(authService: FirebaseAuthenticationService())
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        observeEvent()
         // Do any additional setup after loading the view.
     }
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event)
-        view.endEditing(true)
-      }
+     
     @IBAction func logButtonTapped(_ sender: UIButton) {
         if passwordConfirmed {
-            FirebaseAuthentication.shared.createNewUser(withEmail: email, withPassword: password) { authStatus in
-                switch authStatus{
-                case .unSuccessful:
-                    print("Admin not registered or wrong password")
-                case .successful:
-                    print("signUp successful")
-                    self.performSegue(withIdentifier: "SignUpId", sender: self)
-                case .none:
-                    print("nil found in SignUp")
-                }
+            viewModel.signUp(withEmail: email, withPassword: password)
+        }
+    }
+    
+    //the below functino keeps checking 
+    
+    func observeEvent(){
+        viewModel.signUpResult = { result in
+            switch result{
+            case .loading:
+                print("Loading")
+            case .success:
+                print("success")
+                self.performSegue(withIdentifier: "SignUpId", sender: self)
+            case .failure(let error):
+                print("error in signUp: \(error.localizedDescription)")
             }
         }
-        
     }
 }
 

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		160E3ED22AF93E80003B050C /* FirebaseAuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160E3ED12AF93E80003B050C /* FirebaseAuthenticationService.swift */; };
+		160E3ED52AF958B7003B050C /* LogInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160E3ED42AF958B7003B050C /* LogInViewModel.swift */; };
 		161478FA2AD06E9700F4DD42 /* EventCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161478F82AD06E9700F4DD42 /* EventCardTableViewCell.swift */; };
 		161478FB2AD06E9700F4DD42 /* EventCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 161478F92AD06E9700F4DD42 /* EventCardTableViewCell.xib */; };
 		161D018B2AEA93D700EA10DF /* EventCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161D01892AEA93D700EA10DF /* EventCardCollectionViewCell.swift */; };
@@ -21,6 +23,7 @@
 		16AFD9F02AF411FE00E97D17 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AFD9EF2AF411FE00E97D17 /* LogInViewController.swift */; };
 		16B365512AD1CB3700560332 /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B365502AD1CB3700560332 /* FavouriteViewController.swift */; };
 		16B365542AD1E4A200560332 /* ClubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B365532AD1E4A200560332 /* ClubViewController.swift */; };
+		16CC83722B01505C00D34A54 /* SignUpModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CC83712B01505C00D34A54 /* SignUpModelView.swift */; };
 		16D2BE052AD6EC8F00FC5853 /* ButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D2BE042AD6EC8F00FC5853 /* ButtonViewModel.swift */; };
 		16D2BE072AD70BA800FC5853 /* ScrollViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D2BE062AD70BA800FC5853 /* ScrollViewModel.swift */; };
 		16D2BE0C2AD711EE00FC5853 /* ImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D2BE0B2AD711EE00FC5853 /* ImageViewModel.swift */; };
@@ -55,6 +58,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		160E3ED12AF93E80003B050C /* FirebaseAuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthenticationService.swift; sourceTree = "<group>"; };
+		160E3ED42AF958B7003B050C /* LogInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewModel.swift; sourceTree = "<group>"; };
 		161478F82AD06E9700F4DD42 /* EventCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCardTableViewCell.swift; sourceTree = "<group>"; };
 		161478F92AD06E9700F4DD42 /* EventCardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventCardTableViewCell.xib; sourceTree = "<group>"; };
 		161D01892AEA93D700EA10DF /* EventCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCardCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -68,6 +73,7 @@
 		16AFD9EF2AF411FE00E97D17 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		16B365502AD1CB3700560332 /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
 		16B365532AD1E4A200560332 /* ClubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubViewController.swift; sourceTree = "<group>"; };
+		16CC83712B01505C00D34A54 /* SignUpModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModelView.swift; sourceTree = "<group>"; };
 		16D2BE042AD6EC8F00FC5853 /* ButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViewModel.swift; sourceTree = "<group>"; };
 		16D2BE062AD70BA800FC5853 /* ScrollViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewModel.swift; sourceTree = "<group>"; };
 		16D2BE0B2AD711EE00FC5853 /* ImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewModel.swift; sourceTree = "<group>"; };
@@ -114,6 +120,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		160E3ED32AF953ED003B050C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				160E3ED12AF93E80003B050C /* FirebaseAuthenticationService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		161478F12AD04B4A00F4DD42 /* EventCardCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,7 +149,7 @@
 		162C50BA2ACEF1B700DC9B55 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				16A2CF902AF51709009EC12D /* Firebase */,
+				16A2CF912AF5172E009EC12D /* FirebaseAuthentication.swift */,
 				162C50BB2ACEF1C400DC9B55 /* Composite.swift */,
 			);
 			path = Helper;
@@ -178,14 +192,6 @@
 			children = (
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		16A2CF902AF51709009EC12D /* Firebase */ = {
-			isa = PBXGroup;
-			children = (
-				16A2CF912AF5172E009EC12D /* FirebaseAuthentication.swift */,
-			);
-			path = Firebase;
 			sourceTree = "<group>";
 		};
 		16A2CF952AF53F08009EC12D /* Admin */ = {
@@ -240,6 +246,7 @@
 		16AFD9E72AF3CD3B00E97D17 /* MovelView */ = {
 			isa = PBXGroup;
 			children = (
+				16CC83712B01505C00D34A54 /* SignUpModelView.swift */,
 			);
 			path = MovelView;
 			sourceTree = "<group>";
@@ -272,6 +279,7 @@
 		16AFD9ED2AF411D700E97D17 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				160E3ED42AF958B7003B050C /* LogInViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -382,6 +390,7 @@
 		16EB06892AC8183D00ACAB29 /* Cvent */ = {
 			isa = PBXGroup;
 			children = (
+				160E3ED32AF953ED003B050C /* Services */,
 				162C50BA2ACEF1B700DC9B55 /* Helper */,
 				16EB06BE2AC81D9B00ACAB29 /* Application */,
 				16EB06C02AC81F7900ACAB29 /* Storyboard */,
@@ -626,11 +635,14 @@
 				162C50BC2ACEF1C400DC9B55 /* Composite.swift in Sources */,
 				16EB068F2AC8183D00ACAB29 /* EventViewController.swift in Sources */,
 				16EB068B2AC8183D00ACAB29 /* AppDelegate.swift in Sources */,
+				16CC83722B01505C00D34A54 /* SignUpModelView.swift in Sources */,
 				16B365512AD1CB3700560332 /* FavouriteViewController.swift in Sources */,
 				16D2BE072AD70BA800FC5853 /* ScrollViewModel.swift in Sources */,
 				161478FA2AD06E9700F4DD42 /* EventCardTableViewCell.swift in Sources */,
 				161D018B2AEA93D700EA10DF /* EventCardCollectionViewCell.swift in Sources */,
 				16A2CF942AF517A8009EC12D /* AdminLogInViewController.swift in Sources */,
+				160E3ED52AF958B7003B050C /* LogInViewModel.swift in Sources */,
+				160E3ED22AF93E80003B050C /* FirebaseAuthenticationService.swift in Sources */,
 				16AFD9F02AF411FE00E97D17 /* LogInViewController.swift in Sources */,
 				166917942AF6A12900D7414C /* SettingsViewController.swift in Sources */,
 				16A2CF922AF5172E009EC12D /* FirebaseAuthentication.swift in Sources */,
