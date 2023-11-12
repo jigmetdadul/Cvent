@@ -16,8 +16,10 @@ protocol AuthenticationService{
     func getUserInfo() -> User?
 }
 
+
 class FirebaseAuthenticationService: AuthenticationService {
     private let firebaseAuth = Auth.auth()
+    
     func createNewUser(email: String, password: String, completion: @escaping (Result<Void, Error>) -> Void) {
         firebaseAuth.createUser(withEmail: email, password: password) { [weak self] authRes, error in
             guard self != nil else { return }
